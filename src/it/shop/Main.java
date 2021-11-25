@@ -17,7 +17,7 @@ public class Main {
 		
 		//test prodotto 1
 		System.out.println("Creo un nuovo prodotto");
-		System.out.println("Nome prodotto: ");
+		System.out.println("Inserire nome prodotto, descrizione e iva: ");
 
 		Prodotto prodotto1 = new Prodotto();
 
