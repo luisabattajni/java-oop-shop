@@ -4,17 +4,7 @@ package it.shop;
 public class Main {
 
 	public static void main(String[] args) {
-		//here:
-		//testate tutte le funzionalità della classe Prodotto
-		
-//		* codice (numero intero)
-//		* 		nome
-//		* 		descrizione
-//		* 		prezzo
-//		* 		iva
-		
-	
-		
+
 		// prodotto test 1
 		
 		Prodotto prodotto1 = new Prodotto ("iphone", "magnifico iphone nero", 32, 0.22);
