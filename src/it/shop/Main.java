@@ -17,6 +17,8 @@ public class Main {
 		
 		//test prodotto 1
 		System.out.println("Creo un nuovo prodotto");
+		System.out.println("Nome prodotto: ");
+
 		Prodotto prodotto1 = new Prodotto();
 
 		
@@ -26,6 +28,8 @@ public class Main {
 		System.out.println("Prezzo: " + prodotto1.getPrezzo());
 		System.out.println("Prezzo con IVA: " + prodotto1.getPrezzoIva());
 //		System.out.println("Nome esteso: " + prodotto1.getNomeEsteso());
+		
+		System.out.println();
 
 
 		

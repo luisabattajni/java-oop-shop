@@ -1,6 +1,7 @@
 package it.shop;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class Prodotto {
 	
@@ -44,7 +45,11 @@ public class Prodotto {
 	//costruttori
 	
 	public Prodotto () {
-		this.codice = generaCodice();	
+		this.codice = generaCodice();
+		this.nome = inputNome();
+		this.descrizione = inputDescrizione();
+		this.prezzo = generaPrezzo();
+		this.iva = inputIva();
 		this.prezzoIva = calcolaPrezzoIva();
 		this.nomeEsteso = componiNomeEsteso();
 		
@@ -110,10 +115,63 @@ public class Prodotto {
 	
 	//metodi
 	
+	
+//	public Prodotto () {
+//		this.codice = generaCodice();
+//		this.nome = inputNome();
+//		this.descrizione = inputDescrizione();
+//		this.prezzo = generaPrezzo();
+//		this.iva = inputIva();
+//		this.prezzoIva = calcolaPrezzoIva();
+//		this.nomeEsteso = componiNomeEsteso();
+//		
 	//metodo che genera il codice
 	private int generaCodice() {
 		Random random = new Random();
 		return random.nextInt(900);
+	}
+	
+	//metodo che genera il prezzo
+	private double generaPrezzo() {
+		Random random = new Random();
+		return random.nextDouble()*300.00;
+	}
+	
+//	//metodo che permette di inserire un nome
+//	private String inputNome() {
+//		try (Scanner scan = new Scanner(System.in)) {
+//			return scan.nextLine();
+//		}
+//	}
+//	
+//	//metodo che permette di inserire una descrizione
+//	private String inputDescrizione() {
+//		try (Scanner scan2 = new Scanner(System.in)) {
+//			return scan2.nextLine();
+//		}
+//	}
+//
+//	//metodo permette di inserire l'iva
+//	private double inputIva() {
+//		try (Scanner scan3 = new Scanner(System.in)) {
+//			return scan3.nextDouble();
+//		}
+//	}
+	
+	Scanner scan = new Scanner(System.in);
+	//metodo che permette di inserire un nome
+	private String inputNome() {
+			return scan.nextLine();
+	}
+	
+	//metodo che permette di inserire una descrizione
+	private String inputDescrizione() {
+			return scan.nextLine();
+	}
+
+	//metodo permette di inserire l'iva
+	private double inputIva() {
+			return scan.nextDouble();
 	}
 	
 	//metodo per avere prezzo*iva
@@ -122,13 +180,14 @@ public class Prodotto {
 	}
 	
 	//metodo per nome esteso
+	//WRONG
 	private String componiNomeEsteso() {
 		System.out.println(codice + "-" + nome); 
 		return descrizione;
 	}
 
 
-	
+
 	
 	
 	
